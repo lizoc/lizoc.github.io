@@ -26,7 +26,7 @@ Perhaps you are here to figure out how we made our portal. Our recipe includes:
 
 The whole thing goes somewhat like this:
 
-<p align="center"><img src="https://raw.github.com/lizoc/lizoc.github.com/master/images/github_portal_schema.png" alt="Lizoc Open Source Portal Schema" /></p>
+<p align="center"><img src="https://raw.github.com/lizoc/lizoc.github.com/master/github_portal_schema.png" alt="Lizoc Open Source Portal Schema" /></p>
 
 We run a [NodeJS server](https://www.github.com/lizoc/askoctocat) that aggregates data periodically from [GitHub API](http://developer.github.com). This allows us to 
 consolidate the latest information on our GitHub repos, which is spread across multiple accounts, in one place. The NodeJS server also expose a simple restful API that 
