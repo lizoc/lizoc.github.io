@@ -148,9 +148,9 @@ permalink: /404.html
       
         // Mapping from repo name to the org it moved to.
         var repoRedirect = {
-            'standardfx':     'docs.lizoc.com/standard',
-            'builder':        'docs.lizoc.com/builder',
-            'windowsbuilder': 'docs.lizoc.com/windowsbuilder'
+            'standardfx':     'https://docs.lizoc.com/standard',
+            'builder':        'https://docs.lizoc.com/builder',
+            'windowsbuilder': 'https://docs.lizoc.com/windowsbuilder'
         };
       
         var repoRegex = new RegExp('^/([^/]+)(/|$)');
@@ -159,7 +159,7 @@ permalink: /404.html
         if (match) {
             var newLocation = repoRedirect[match[1]];
             if (newLocation) {
-                location.host = newLocation;
+                location.href = newLocation;
             }
         }
     }());
