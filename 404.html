@@ -141,5 +141,28 @@ permalink: /404.html
       <a href="#" onclick="javascript:window.history.go(-1); return false;">Turn Back</a>
     </div>
   </div>
+  <script type="application/javascript">
+    // redirect for repos that have been moved.
+    (function() {
+        'use strict';
+      
+        // Mapping from repo name to the org it moved to.
+        var repoRedirect = {
+            'standardfx':     'docs.lizoc.com/standard',
+            'builder':        'docs.lizoc.com/builder',
+            'windowsbuilder': 'docs.lizoc.com/windowsbuilder'
+        };
+      
+        var repoRegex = new RegExp('^/([^/]+)(/|$)');
+        var match = repoRegex.exec(location.pathname);
+      
+        if (match) {
+            var newLocation = repoRedirect[match[1]];
+            if (newLocation) {
+                location.host = newLocation;
+            }
+        }
+    }());
+  </script>
 </body>
 </html>
